@@ -18,18 +18,28 @@ The new field is labeled “Website Address”, allowing users to store any loca
 
 ## Installation
 
-1. Copy the module folder into:  
-   `/odoo/addons/`
+1. Clone or copy the module to your Odoo custom addons directory:
+   ```bash
+   /path/to/odoo/custom_addons/app_one/
+   ```
 
-2. Restart the Odoo server:  
+2. Update your `odoo.conf` file to include the custom addons path:
+   ```ini
+   [options]
+   addons_path = /path/to/odoo/addons,
+                 /path/to/odoo/odoo/addons,
+                 /path/to/odoo/custom_addons
+   ```
+
+3. Restart the Odoo server:  
    `sudo systemctl restart odoo`
 
-3. Activate **Developer Mode**.
+4. Activate **Developer Mode**.
 
-4. Go to:  
+5. Go to:  
    `Apps → Update Apps List`
 
-5. Search for **Real Estate** and install it.
+6. Search for **Real Estate** and install it.
 
 ## Usage
 
