@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
         <record id="product_category_form_view_inherited" model="ir.ui.view">
@@ -15,12 +14,11 @@
         <record id="product_category_list_view_custom" model="ir.ui.view">
             <field name="name">product.category.list.custom</field>
             <field name="model">product.category</field>
-            <field name="priority" eval="99"/>
+            <field name="inherit_id" ref="product.product_category_list_view"/>
             <field name="arch" type="xml">
-                <list string="Product Categories">
-                    <field name="display_name"/>
+                <xpath expr="//list/field[@name='display_name']" position="after">
                     <field name="location_address"/>
-                </list>
+                </xpath>
             </field>
         </record>
     </data>
